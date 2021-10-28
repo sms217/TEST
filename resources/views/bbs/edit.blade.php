@@ -14,7 +14,7 @@
                             You can edit.
                         </h6>
                         <div class="float-right">
-                            <a id="cancel" href="{{route('cars.show',['car'=>$post->id, 'page'=>$page])}}"
+                            <a id="cancel" href="{{route('cars.show',['car'=>$post->id])}}"
                                 class="mr-2 bg-yellow-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                                 onclick="confirmCancel()">
                                 cancle
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <form method="POST" action="{{route('cars.update',['car'=>$post->id, 'page'=>$page])}}" id="form"
+                    <form method="POST" action="{{route('cars.update',['car'=>$post->id])}}" id="form"
                         enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
